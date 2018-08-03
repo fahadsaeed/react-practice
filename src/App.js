@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import style from './App.css';
 import Person from './Person/Person'
 
 class App extends Component {
@@ -55,7 +55,7 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
+            <div className={style.App}>
                 Person Card App
                 <hr/>
                 <button onClick={this.togglePersons}>{this.state.personListRender ? 'Hide' : "Show"} Persons</button>

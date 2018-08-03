@@ -1,10 +1,10 @@
 import React from 'react';
 
-import './Person.css'
+import style from './Person.css'
 
 const person = (props) => {
 
-    const style = {
+    const styleBtn = {
         backgroundColor: '#fff',
         border: '1px solid red',
         color: 'red',
@@ -14,9 +14,9 @@ const person = (props) => {
     };
 
     return (
-        <div className="Person">
+        <div className={style.Person}>
             <p>I'm  {props.name} and I'm  {props.age} years old!
-                <button style={style} onClick={props.deleteHandler}>Delete</button> </p>
+                <button style={styleBtn} onClick={props.deleteHandler}>Delete</button> </p>
             <input onChange={props.onChangeHandler} value={props.name} />
             {props.children}
         </div>
